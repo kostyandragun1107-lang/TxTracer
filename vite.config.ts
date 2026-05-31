@@ -1,4 +1,3 @@
-/// <reference types="vitest" />
 import {resolve} from "path"
 import {writeFileSync} from "fs"
 
@@ -69,15 +68,5 @@ export default defineConfig({
     esbuildOptions: {
       target: "es2020",
     },
-  },
-  test: {
-    globals: true,
-    environment: "jsdom",
-    include: ["src/**/*.spec.ts", "src/**/*.test.ts"],
-    exclude: ["e2e-tests/**"],
-    // coverage: {
-    //   reporter: ["text", "json", "html"],
-    //   provider: "v8", // or "istanbul"
-    // },
   },
 })
